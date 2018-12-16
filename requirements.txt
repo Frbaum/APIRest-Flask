@@ -20,7 +20,6 @@ modulegraph==0.10.4
 numpy==1.8.0rc1
 pipenv==2018.11.26
 py2app==0.7.3
-pymongo==3.7.2
 pyobjc-core==2.5.1
 pyobjc-framework-Accounts==2.5.1
 pyobjc-framework-AddressBook==2.5.1
@@ -56,7 +55,6 @@ pyobjc-framework-Social==2.5.1
 pyobjc-framework-SyncServices==2.5.1
 pyobjc-framework-SystemConfiguration==2.5.1
 pyobjc-framework-WebKit==2.5.1
-pyOpenSSL==0.13.1
 pyparsing==2.0.1
 python-dateutil==1.5
 python-editor==1.0.3
