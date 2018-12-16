@@ -1,0 +1,85 @@
+The APIRest-Flask project is a python flask project using SQLite database
+
+INSTALLATION 
+
+1 - Download the project
+2 - Install all dependencies 
+    $ pip install -r requirements.txt
+3 - Create your virtual environment
+     $ virtualenv flask
+     $ source venv/bin/activate
+4 - Run the index file 
+     $ python index.py
+
+
+USING IT 
+
+If you are using Insomnia , you can import the file cmd.har. This file contains 7 requests.
+
+Here are the 8 requests allowed on the APIRest
+UPDATE USER 
+> Updta user details using user id
+  Method PUT
+  (http://127.0.0.1:5000/user/XXXX where XXXX : user id)
+  JSON : {
+            "lastname": "DUPONT",
+            "firstname": "Jean",
+            "birthday" : "09111994"
+          }
+          
+UPDATE PROPERTY
+> Update property information using user id and property id
+  Method PUT
+  (http://127.0.0.1:5000/property/XXXX/update/YYYY where XXXX : user id and YYYY : property id)
+  JSON :   {
+              "city": "LYON",
+              "comments": "Jardin",
+              "description": "60m2",
+              "name": "Appartement Foch",
+              "owner": 2,
+              "propertyType": "Appartement",
+              "rooms": 4
+            }
+ADD PROPERTY
+> Create a new property (available if user id exists)
+  Method POST
+  (http://127.0.0.1:5000/property)
+  JSON :   {
+            "city": "LYON",
+            "comments": "Jardin",
+            "description": "60m2",
+            "name": "Appartement Foch",
+            "owner": 2,
+            "propertyType": "Appartement",
+            "rooms": 4
+          } 
+          
+CREATE USER
+> Create a new user
+  Method POST
+  (http://127.0.0.1:5000/user)
+  JSON : {
+            "lastname": "DUPONT",
+            "firstname": "Jean",
+            "birthday" : "09111994"
+          } 
+          
+GET PROPERTIES BY CITY
+> Get all properties of a specified city
+  Method GET
+  http://127.0.0.1:5000/properties/PARIS
+  
+GET USER
+> Get user detail using the user id
+  Method GET
+  http://127.0.0.1:5000/user/XXXX where XXXX : user id
+
+GET USERS
+> Get all users
+  Method GET
+  http://127.0.0.1:5000/users
+  
+GET USER PROPERTIES
+> Get all properties belonging to a user using his user id
+  Method GET
+  http://127.0.0.1:5000/property/XXXX where XXXX : user id
